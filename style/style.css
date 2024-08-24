@@ -56,7 +56,7 @@ a{color:#66cc99; text-decoration:none;}
   color:#9099a0;
   @include breakpoint(brother-bear) { width: 100%; }
   .name-wrapper {
-    /*float:left;*/
+    float:left;
     margin-left: 40px;
     width:50%;
   }
