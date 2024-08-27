@@ -48,7 +48,9 @@
       <div class="name-wrapper">
         <h1>Faranak </br> Solat</h1><!-- YOUR NAME AND LAST NAME  -->
       </div>
-      <button style="background-color: #66cc99; padding: 10px; border-radius: 8px; margin: 10px; float: left;"><a href="https://drive.google.com/file/d/1d7C43W-koD7O_1_FMAZaaHSDQxMf_hgv/view?usp=sharing" target="_blank" style="color: #3d3e42;">Download Resume</a></button>
+      <a href="https://drive.google.com/file/d/1d7C43W-koD7O_1_FMAZaaHSDQxMf_hgv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="trackResumeDownload()">
+  &#128190; Download Resume
+</a>
       <div class="clearfix"></div>
       <div class="contact-info clearfix">
       	<ul class="list-titles">
@@ -158,5 +160,11 @@
         <p>&copy;2024 Faranak Solat</p>
     </footer>
     <script src="style/script.js"></script>
+    <script>
+  function trackResumeDownload() {
+    // Replace with your Google Analytics tracking code or other analytics tool
+    console.log('Resume download button clicked');
+  }
+</script>
 </body>
 </html>
