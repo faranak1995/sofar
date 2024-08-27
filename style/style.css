@@ -404,3 +404,18 @@ h3.section-title {
     margin-top: 50px;
   }
 }
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #66cc99; /* Match your website's color scheme */
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Adds a hover effect */
+}
+
+.download-btn:hover {
+  background-color: #55aa88; /* Darken the color on hover */
+}
