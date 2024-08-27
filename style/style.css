@@ -419,3 +419,10 @@ h3.section-title {
 .download-btn:hover {
   background-color: #55aa88; /* Darken the color on hover */
 }
+@media (max-width: 450px) {
+  .download-btn {
+    font-size: 14px; /* Slightly smaller font size for mobile */
+    padding: 12px 16px; /* Increase padding for touch targets */
+  }
+}
+
