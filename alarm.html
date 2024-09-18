@@ -27,6 +27,13 @@
     <div id="alarmMessage">Fall detection alarm!</div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    alert("Fall detection alarm triggered for Home 17");
+    alert("Fall detection alarm triggered for Home 18");
+    alert("Fall detection alarm triggered for Home 19");
+    alert("Fall detection alarm triggered for Home 20");
+});
+
         // Connect to the WebSocket server
         let socket = new WebSocket("ws://210.102.178.227:5678"); // Replace with your server IP and port
 
