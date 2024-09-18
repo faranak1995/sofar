@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fall Detection Alarm</title>
-    <script>
-        let socket = new WebSocket("ws://210.102.178.227:5678"); 
+    <style>
+        /* Styling for the alarm message */
+        #alarmMessage {
+            display: none;  /* Hidden by default */
+            background-color: red;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fall Detection Monitor</h1>
+    <p>Waiting for alarm notifications...</p>
 
-        // When the connection is open
+    <!-- Div that will show the fall detection alarm -->
+    <div id="alarmMessage">Fall detection alarm!</div>
+
+    <script>
+        // Connect to the WebSocket server
+        let socket = new WebSocket("ws://210.102.178.227:5678"); // Replace with your server IP and port
+
+        // Display the alarm message when a fall detection alarm is received
+        socket.onmessage = function(event) {
+            const alarmMessage = document.getElementById("alarmMessage");
+            alarmMessage.style.display = "block";  // Show the alarm message
+            alarmMessage.innerText = "ALARM: " + event.data;  // Set the message content
+        };
+
+        // Handle any WebSocket connection errors
+        socket.onerror = function(error) {
+            console.error("WebSocket error:", error);
+        };
+
+        // Connection established
         socket.onopen = function(e) {
             console.log("[open] Connection established");
         };
 
-        // When a message is received
-        socket.onmessage = function(event) {
-            alert("ALARM: " + event.data);  // Show pop-up alert for fall detection
-        };
-
-        // When the connection is closed
+        // Connection closed
         socket.onclose = function(event) {
             if (event.wasClean) {
                 console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
@@ -25,15 +54,6 @@
                 console.log('[close] Connection closed abruptly');
             }
         };
-
-        // If an error occurs
-        socket.onerror = function(error) {
-            console.log(`[error] ${error.message}`);
-        };
     </script>
-</head>
-<body>
-    <h1>Fall Detection Alarm</h1>
-    <p>Waiting for alarm notifications...</p>
 </body>
 </html>
