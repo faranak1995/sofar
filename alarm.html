@@ -33,8 +33,11 @@
         // Display the alarm message when a fall detection alarm is received
         socket.onmessage = function(event) {
             const alarmMessage = document.getElementById("alarmMessage");
+
+            // Display the message and show it as a pop-up alert
             alarmMessage.style.display = "block";  // Show the alarm message
-            alarmMessage.innerText = "ALARM: " + event.data;  // Set the message content
+            alarmMessage.innerText = event.data;  // Set the message content
+            alert(event.data);  // Trigger a pop-up alert with the event data
         };
 
         // Handle any WebSocket connection errors
