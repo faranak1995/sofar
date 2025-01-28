@@ -57,6 +57,27 @@ a {
   width: 50%;
 }
 
+.section-wrapper.skills {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px; /* Add some spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.section-wrapper.skills ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.section-wrapper.skills li {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333; /* Text color */
+    font-weight: 500;
+}
+
+
 h1 {
   font-size: 2.5em;
   text-align: left;
