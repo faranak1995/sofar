@@ -59,6 +59,9 @@ a {
 
 .section-wrapper.skills {
     background-color: #f4f4f4; /* Light gray background */
+    width: 60%;
+    float: left;
+    position: relative;
     padding: 20px; /* Add some spacing */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
