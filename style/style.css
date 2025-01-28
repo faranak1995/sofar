@@ -59,21 +59,25 @@ a {
 
 .section-wrapper.skills {
     background-color: #f4f4f4; /* Light gray background */
-    width: 60%;
+    width: 60%; /* Default width for larger screens */
     float: left;
     position: relative;
-    padding: 20px; /* Add some spacing */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    clear: both; /* Prevents overlap issues */
 }
 
-/* Make it Full Width on Smaller Screens */
+/* Full Width on Mobile & Fix Overlapping */
 @media (max-width: 768px) {
     .section-wrapper.skills {
-        width: 100%; /* Full width on mobile */
-        float: none; /* Remove float to avoid layout breaking */
-        padding: 20px; /* Keep padding consistent */
-        border-radius: 0; /* Remove rounded corners for a cleaner look */
+        width: 100%; /* Full width */
+        float: none; /* Remove floating */
+        padding: 20px;
+        border-radius: 0; /* Remove rounded corners for a clean look */
+        position: relative; /* Ensures it stays within flow */
+        margin-top: 20px; /* Adds spacing to prevent overlap */
+        clear: both; /* Fix overlapping issues */
     }
 }
 
